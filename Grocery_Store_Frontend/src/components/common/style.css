@@ -1,0 +1,541 @@
+/*
+ * Google Fonts Import
+ * Replace Tailwind's utility-first approach with base styles and custom classes.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Download Button */
+.text-center {
+    text-align: center;
+}
+
+.my-6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.download-button {
+    cursor: pointer;
+    background-color: #16a34a; /* bg-green-600 */
+    color: white;
+    padding: 1rem 1.5rem; /* px-6 py-3 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow */
+    transition: background-color 0.2s; /* transition-colors duration-200 */
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.download-button:hover {
+    background-color: #15803d; /* hover:bg-green-700 */
+}
+
+/* Invoice Container */
+.invoice-page {
+    padding: 1rem; /* p-4 */
+    background-color: #f3f4f6; /* bg-gray-100 */
+}
+
+@media (min-width: 768px) {
+    .invoice-page {
+        padding: 2rem; /* md:p-8 */
+    }
+}
+
+@media (min-width: 1024px) {
+    .invoice-page {
+        padding: 3rem; /* lg:p-12 */
+    }
+}
+
+.invoice-container {
+    max-width: 80rem; /* max-w-5xl (approx 80rem) */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white; /* bg-white */
+    border-radius: 1.5rem; /* rounded-3xl */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+    overflow: hidden;
+    transform: scale(1); /* transform transition-all duration-300 */
+    transition: transform 0.3s ease-in-out;
+}
+
+.invoice-container:hover {
+    transform: scale(1.005);
+}
+
+.invoice-content {
+    background-color: #f3f4f6;
+}
+
+/* Invoice Header */
+.invoice-header {
+    position: relative;
+    background-color: #22c55e; /* bg-green-500 */
+    padding: 2rem; /* p-8 */
+    color: white;
+    text-align: center;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    background-image: url('data:image/svg+xml,...'); /* You can use a repeating SVG or pattern for header-pattern */
+}
+
+@media (min-width: 768px) {
+    .invoice-header {
+        padding: 3rem; /* md:p-12 */
+    }
+}
+
+.header-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    opacity: 0.1;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.header-content {
+    position: relative;
+    z-index: 10;
+}
+
+.store-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem; /* mb-3 */
+}
+
+.cart-icon {
+    width: 2.5rem; /* w-10 */
+    height: 2.5rem; /* h-10 */
+    margin-right: 1rem; /* mr-4 */
+    color: white;
+}
+
+.store-name {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 800; /* font-extrabold */
+    letter-spacing: -0.05em; /* tracking-tight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); /* drop-shadow-lg */
+}
+
+@media (min-width: 768px) {
+    .store-name {
+        font-size: 3rem; /* md:text-5xl */
+    }
+}
+
+.store-tagline {
+    margin-top: 0.5rem; /* mt-2 */
+    font-size: 1rem; /* text-base */
+    font-weight: 300; /* font-light */
+    opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+    .store-tagline {
+        font-size: 1.125rem; /* md:text-lg */
+    }
+}
+
+.store-contact {
+    margin-top: 0.5rem; /* mt-2 */
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 300; /* font-light */
+    opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+    .store-contact {
+        font-size: 0.875rem; /* md:text-sm */
+    }
+}
+
+/* Main Details Section */
+.main-details {
+    padding: 2rem; /* p-8 */
+    border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+    margin-bottom: 2.5rem; /* mb-10 */
+    padding-bottom: 2rem; /* pb-8 */
+}
+
+@media (min-width: 768px) {
+    .main-details {
+        padding: 3rem; /* md:p-12 */
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* grid-cols-2 */
+        gap: 2rem; /* gap-8 */
+    }
+}
+
+.details-section {
+    color: #4b5563; /* text-gray-700 */
+}
+
+.section-heading {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    color: #1f2937; /* text-gray-800 */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* space-y-2 */
+}
+
+.label {
+    font-weight: 600; /* font-semibold */
+    color: #1f2937; /* text-gray-900 */
+}
+
+.highlight {
+    color: #16a34a; /* text-green-600 */
+    font-weight: 500; /* font-medium */
+}
+
+.detail-item, .detail-item-address {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* mr-3 */
+}
+
+.detail-item-address {
+    align-items: flex-start;
+}
+
+.detail-icon {
+    width: 1.25rem; /* w-5 */
+    height: 1.25rem; /* h-5 */
+    color: #22c55e; /* text-green-500 */
+    flex-shrink: 0;
+}
+
+.detail-icon-address {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #22c55e;
+    flex-shrink: 0;
+    margin-top: 0.25rem; /* mt-1 */
+}
+
+/* Payment & Delivery Status Section */
+.status-section {
+    display: flex;
+    flex-direction: column; /* flex-col */
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0fdf4; /* bg-green-50 */
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.75rem; /* rounded-xl */
+    margin-bottom: 2.5rem; /* mb-10 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+}
+
+@media (min-width: 768px) {
+    .status-section {
+        flex-direction: row; /* md:flex-row */
+    }
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+@media (min-width: 768px) {
+    .status-item {
+        margin-bottom: 0; /* md:mb-0 */
+    }
+}
+
+.status-icon {
+    width: 1.75rem; /* w-7 */
+    height: 1.75rem; /* h-7 */
+    color: #16a34a; /* text-green-600 */
+    margin-right: 0.75rem; /* mr-3 */
+}
+
+.status-text {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600; /* font-semibold */
+    color: #1f2937; /* text-gray-800 */
+}
+
+.status-value {
+    font-weight: 800; /* font-extrabold */
+    color: #14532d; /* text-green-700 */
+}
+
+.status-mode {
+    font-weight: 500; /* font-medium */
+    color: #4b5563; /* text-gray-600 */
+}
+
+/* Items Table */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    border-radius: 0.75rem; /* rounded-xl */
+    border: 1px solid #f3f4f6; /* border border-gray-100 */
+}
+
+.items-table {
+    min-width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+}
+
+.items-table thead {
+    background-color: #f9fafb; /* bg-gray-50 */
+    border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+}
+
+.table-header {
+    padding: 1rem 1.5rem; /* py-4 px-6 */
+    text-align: left;
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 600; /* font-semibold */
+    color: #4b5563; /* text-gray-600 */
+    text-transform: uppercase;
+    letter-spacing: 0.05em; /* tracking-wider */
+}
+
+.first-child {
+    border-top-left-radius: 0.75rem;
+}
+
+.last-child {
+    border-top-right-radius: 0.75rem;
+}
+
+.items-table tbody tr {
+    transition: background-color 0.2s; /* transition-colors duration-200 */
+}
+
+.items-table tbody tr:hover {
+    background-color: #f0fdf4; /* hover:bg-green-50 */
+}
+
+.items-table tbody td {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.items-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-data {
+    padding: 1rem 1.5rem; /* py-4 px-6 */
+    white-space: nowrap;
+    color: #4b5563; /* text-gray-700 */
+}
+
+.product-name {
+    font-weight: 500; /* font-medium */
+    color: #1f2937; /* text-gray-900 */
+}
+
+.total-price {
+    font-weight: 600; /* font-semibold */
+    color: #1f2937; /* text-gray-800 */
+}
+
+/* Summary Section */
+.summary-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.summary-box {
+    width: 100%;
+    background-color: #f0fdf4; /* bg-green-50 */
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); /* shadow-inner */
+    border: 1px solid #dcfce7; /* border border-green-100 */
+}
+
+@media (min-width: 768px) {
+    .summary-box {
+        width: 50%; /* md:w-1/2 */
+    }
+}
+
+@media (min-width: 1024px) {
+    .summary-box {
+        width: 40%; /* lg:w-2/5 */
+    }
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 0.75rem;
+}
+
+.summary-value {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.delivery-charge {
+    color: #16a34a; /* text-green-600 */
+}
+
+.discount {
+    color: #ef4444; /* text-red-500 */
+}
+
+.dashed-border {
+    padding-bottom: 0.75rem; /* pb-3 */
+    border-bottom: 1px dashed #bbf7d0; /* border-b border-dashed border-green-200 */
+}
+
+.total-amount-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 800; /* font-extrabold */
+    color: #14532d; /* text-green-800 */
+    padding-top: 1rem; /* pt-4 */
+}
+
+.total-amount-value {
+    font-size: 2.25rem; /* text-4xl */
+}
+
+/* Notes & Footer */
+.invoice-notes {
+    background-color: #f9fafb; /* bg-gray-50 */
+    padding: 1.5rem 2rem; /* px-8 py-6 */
+    text-align: center;
+    font-size: 0.875rem; /* text-sm */
+    color: #4b5563; /* text-gray-600 */
+    border-top: 1px solid #e5e7eb; /* border-t border-gray-200 */
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .invoice-notes {
+        padding-left: 3rem; /* md:px-12 */
+        padding-right: 3rem; /* md:px-12 */
+    }
+}
+
+.thank-you {
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
+}
+
+.return-policy {
+    margin-bottom: 0.5rem;
+}
+
+.system-note {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #9ca3af;
+}
+
+.invoice-footer {
+    background-color: #1f2937; /* bg-gray-800 */
+    padding: 1rem; /* py-4 */
+    text-align: center;
+    color: white;
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 300; /* font-light */
+    letter-spacing: 0.025em; /* tracking-wide */
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.website-link {
+    margin-top: 0.25rem;
+}
+
+.invoice-footer a {
+    color: white;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.invoice-footer a:hover {
+    color: #a7f3d0; /* hover:text-green-300 */
+}
+
+
+/* style.css */
+
+/* Your existing CSS for screen goes here */
+
+@media print {
+    body {
+        font-size: 10pt; /* Reduce base font size for print */
+    }
+
+    .invoice-page {
+        padding: 0.5rem; /* Reduce padding to save space */
+    }
+
+    .invoice-container {
+        box-shadow: none; /* Remove shadows for cleaner print */
+        border-radius: 0;
+        transform: none;
+    }
+
+    .invoice-header,
+    .main-details,
+    .status-section,
+    .table-container,
+    .summary-container,
+    .invoice-notes,
+    .invoice-footer {
+        padding: 0.75rem 1rem; /* Reduce padding on sections */
+    }
+
+    .store-name {
+        font-size: 1.5rem; /* Make header smaller */
+    }
+
+    .section-heading {
+        font-size: 1.2rem;
+    }
+
+    .items-table {
+        font-size: 0.8em; /* Smaller table text */
+    }
+
+    /* Use CSS page-break properties to control breaks */
+    .page-break {
+        page-break-before: always;
+    }
+
+    /* Ensure table rows don't break across pages */
+    .item-row {
+        page-break-inside: avoid;
+    }
+}

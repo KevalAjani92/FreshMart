@@ -1,0 +1,290 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@theme {
+  /* Colors */
+  --color-fresh-green: #22c55e;
+  --color-grocery-orange: #f97316;
+  --color-grocery-yellow: #eab308;
+
+  /* Primary Shades */
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-300: #86efac;
+  --color-primary-400: #4ade80;
+  --color-primary-500: #22c55e;
+  --color-primary-600: #16a34a;
+  --color-primary-700: #15803d;
+  --color-primary-800: #166534;
+  --color-primary-900: #14532d;
+
+  /* Secondary Shades */
+  --color-secondary-50: #fff7ed;
+  --color-secondary-100: #ffedd5;
+  --color-secondary-200: #fed7aa;
+  --color-secondary-300: #fdba74;
+  --color-secondary-400: #fb923c;
+  --color-secondary-500: #f97316;
+  --color-secondary-600: #ea580c;
+  --color-secondary-700: #c2410c;
+  --color-secondary-800: #9a3412;
+  --color-secondary-900: #7c2d12;
+
+  /* Accent Shades */
+  --color-accent-50: #fefce8;
+  --color-accent-100: #fef9c3;
+  --color-accent-200: #fef08a;
+  --color-accent-300: #fde047;
+  --color-accent-400: #facc15;
+  --color-accent-500: #eab308;
+  --color-accent-600: #ca8a04;
+  --color-accent-700: #a16207;
+  --color-accent-800: #854d0e;
+  --color-accent-900: #713f12;
+
+  /* Font */
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* Border Radius */
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+
+  /* Box Shadows */
+  --shadow-soft: 0 2px 15px -3px rgba(0, 0, 0, 0.07),
+    0 10px 20px -2px rgba(0, 0, 0, 0.04);
+  --shadow-soft-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Wrapper for StoreOwner Layout */
+.storeowner-layout {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background-color: #f9fafb; /* gray-50 */
+  color: #111827; /* gray-900 */
+}
+
+/* Headings */
+.storeowner-layout h1,
+.storeowner-layout h2,
+.storeowner-layout h3,
+.storeowner-layout h4,
+.storeowner-layout h5,
+.storeowner-layout h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Paragraphs */
+.storeowner-layout p {
+  line-height: 1.6;
+}
+
+/* Buttons / Inputs */
+.storeowner-layout button,
+.storeowner-layout input,
+.storeowner-layout select,
+.storeowner-layout textarea {
+  transition: all 0.2s;
+}
+
+.storeowner-layout input:focus,
+.storeowner-layout select:focus,
+.storeowner-layout textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.5);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #6ee7b7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #10b981;
+}
+
+/* Gradients */
+.storeowner-layout .gradient-primary {
+  background: linear-gradient(to right, #22c55e, #16a34a);
+}
+.storeowner-layout .gradient-secondary {
+  background: linear-gradient(to right, #f97316, #ea580c);
+}
+.storeowner-layout .gradient-accent {
+  background: linear-gradient(to right, #eab308, #ca8a04);
+}
+
+.grocery-pattern {
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(249, 115, 22, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(234, 179, 8, 0.05) 0%, transparent 50%);
+  }
+
+
+/* Borders & Shadows */
+.storeowner-layout .organic-border {
+  border: 2px solid #bbf7d0;
+  border-radius: 1rem;
+}
+
+.storeowner-layout .hover-lift {
+  transition: all 0.3s;
+}
+
+.storeowner-layout .hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.storeowner-layout .fresh-shadow {
+  box-shadow: 0 4px 6px -1px rgba(34, 197, 94, 0.15),
+    0 2px 4px -1px rgba(34, 197, 94, 0.1);
+}
+
+.storeowner-layout .shadow-fresh-lg {
+  box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.2),
+    0 10px 10px -5px rgba(34, 197, 94, 0.1);
+}
+
+/* Card hover */
+.storeowner-layout .card-hover {
+  transition: all 0.3s;
+}
+
+.storeowner-layout .card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient text */
+.storeowner-layout .gradient-text {
+  background: linear-gradient(45deg, #10b981, #059669, #047857);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 3s ease infinite;
+}
+
+/* Animations */
+.storeowner-layout .animate-bounce-gentle {
+  animation: bounce-gentle 2s infinite;
+}
+.storeowner-layout .animate-pulse-soft {
+  animation: pulse-soft 2s infinite;
+}
+.storeowner-layout .animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.storeowner-layout .animate-float-delayed {
+  animation: float-delayed 8s ease-in-out infinite;
+}
+.storeowner-layout .animate-float-slow {
+  animation: float-slow 10s ease-in-out infinite;
+}
+.storeowner-layout .animate-gradient {
+  animation: gradient 3s ease infinite;
+  background-size: 200% 200%;
+}
+.storeowner-layout .animate-slide-down {
+  animation: slide-down 0.3s ease-out;
+}
+.storeowner-layout .animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+.storeowner-layout .animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes bounce-gentle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes float-delayed {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(34, 197, 94, 0.6);
+  }
+}
